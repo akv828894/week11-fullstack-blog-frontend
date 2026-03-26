@@ -1,5 +1,10 @@
 # Week 11 Submission Checklist
 
+## Current Links
+
+- GitHub: `https://github.com/akv828894/week11-fullstack-blog-frontend`
+- Live frontend: `https://week11-fullstack-blog-frontend.vercel.app`
+
 ## Before Push
 
 - [ ] Run `npm run build`
