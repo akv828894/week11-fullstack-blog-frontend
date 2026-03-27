@@ -2,7 +2,7 @@ import { startTransition, useEffect, useState } from 'react';
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import StatusBanner from './components/StatusBanner';
-import { apiBaseUrl, createPost, deletePostById, getPosts } from './services/api';
+import { createPost, deletePostById, getPosts } from './services/api';
 
 const initialForm = {
   title: '',
@@ -185,20 +185,17 @@ export default function App() {
 
   return (
     <div className="page-shell">
-      <div className="backdrop backdrop-one" />
-      <div className="backdrop backdrop-two" />
-
       <main className="app-layout">
         <section className="hero-card">
-          <p className="eyebrow">Week 11 | MERN Integration</p>
-          <h1>Fullstack Blog Control Room</h1>
+          <p className="eyebrow">Week 11 Fullstack Project</p>
+          <h1>Fullstack Blog</h1>
           <p className="hero-copy">
-            This frontend talks to your API in real time. Create posts, refresh the feed, and manage
-            your Week 11 blog flow from one dashboard.
+            Create blog posts from the React UI, load them from the backend, and delete them from the
+            same screen.
           </p>
           <div className="hero-meta">
             <span>Frontend: React + Vite</span>
-            <span>Backend: {apiBaseUrl}</span>
+            <span>Backend: Express API</span>
           </div>
         </section>
 
@@ -206,14 +203,13 @@ export default function App() {
           <div className="panel">
             <div className="panel-heading">
               <div>
-                <p className="panel-kicker">Create Post</p>
-                <h2>Publish from the UI</h2>
+                <p className="panel-kicker">New Post</p>
+                <h2>Add a blog post</h2>
               </div>
             </div>
 
             <p className="panel-note">
-              Fill all three fields properly before publishing. Short drafts get blocked so your demo
-              looks more professional.
+              Fill in the title, author name, and content to create a new post.
             </p>
 
             <PostForm
@@ -228,8 +224,8 @@ export default function App() {
           <div className="panel">
             <div className="panel-heading posts-heading">
               <div>
-                <p className="panel-kicker">Live Feed</p>
-                <h2>Posts from your backend</h2>
+                <p className="panel-kicker">Posts</p>
+                <h2>Saved blog posts</h2>
                 <p className="feed-summary">
                   {posts.length} post{posts.length === 1 ? '' : 's'} loaded |{' '}
                   {isLoading ? 'Loading feed...' : isRefreshing ? 'Refreshing feed...' : `Last sync ${formatSyncTime(lastSyncedAt)}`}

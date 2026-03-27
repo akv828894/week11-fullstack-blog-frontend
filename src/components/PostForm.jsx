@@ -12,7 +12,7 @@ export default function PostForm({
         <input
           className={fieldErrors.title ? 'input-error' : ''}
           type="text"
-          placeholder="Write a clear headline"
+          placeholder="Enter post title"
           value={formValues.title}
           onChange={(event) => onFieldChange('title', event.target.value)}
           aria-invalid={Boolean(fieldErrors.title)}
@@ -20,7 +20,7 @@ export default function PostForm({
           required
         />
         <small id="post-title-help" className={fieldErrors.title ? 'field-error' : 'field-help'}>
-          {fieldErrors.title || 'Use a short, clear blog headline.'}
+          {fieldErrors.title || 'Title must be at least 4 characters long.'}
         </small>
       </label>
 
@@ -29,7 +29,7 @@ export default function PostForm({
         <input
           className={fieldErrors.author ? 'input-error' : ''}
           type="text"
-          placeholder="Your name"
+          placeholder="Enter author name"
           value={formValues.author}
           onChange={(event) => onFieldChange('author', event.target.value)}
           aria-invalid={Boolean(fieldErrors.author)}
@@ -37,7 +37,7 @@ export default function PostForm({
           required
         />
         <small id="post-author-help" className={fieldErrors.author ? 'field-error' : 'field-help'}>
-          {fieldErrors.author || 'Use the name you want to show in the demo.'}
+          {fieldErrors.author || 'Author name must be at least 2 characters long.'}
         </small>
       </label>
 
@@ -46,7 +46,7 @@ export default function PostForm({
         <textarea
           className={fieldErrors.content ? 'input-error' : ''}
           rows="7"
-          placeholder="Write the content that should be saved in MongoDB"
+          placeholder="Write the blog content here"
           value={formValues.content}
           onChange={(event) => onFieldChange('content', event.target.value)}
           aria-invalid={Boolean(fieldErrors.content)}
@@ -54,17 +54,13 @@ export default function PostForm({
           required
         />
         <small id="post-content-help" className={fieldErrors.content ? 'field-error' : 'field-help'}>
-          {fieldErrors.content || 'Aim for at least 20 characters so the post feels real.'}
+          {fieldErrors.content || 'Content must be at least 20 characters long.'}
         </small>
       </label>
 
       <button className="primary-button" type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Publishing...' : 'Create Post'}
+        {isSubmitting ? 'Saving...' : 'Create Post'}
       </button>
-
-      <p className="form-note">
-        Demo tip: create one post, refresh the feed, then delete it to show the full Week 11 flow.
-      </p>
     </form>
   );
 }

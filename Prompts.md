@@ -53,6 +53,9 @@ Lock the Week 11 frontend for final video recording and submission.
 - Updated the frontend to show the active backend URL from the shared API config
 - Verified the production build points to the live Week 11 backend
 - Updated submission docs to match the final deployment setup
+- Simplified the UI copy so the project looks more natural and assignment-focused
+- Cleaned the frontend layout and removed unnecessary decorative elements
+- Removed extra demo-facing details that were not needed for the blog flow
 
 ### Final Demo Flow
 

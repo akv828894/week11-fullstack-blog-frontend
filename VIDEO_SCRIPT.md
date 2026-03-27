@@ -1,18 +1,27 @@
 # Week 11 Demo Script
 
-## 3-Minute Flow
+## Spoken Lines
 
-1. Introduce the project as a Week 11 fullstack blog app
-2. Show the frontend home screen
-3. Explain that the form creates real posts from the UI
-4. Create a new post
-5. Show the success message and the new post card
-6. Click refresh to show the feed syncing again
-7. Refresh the page in the browser
-8. Show that the post is still present
-9. Delete the post
-10. End by showing the deployed frontend link and GitHub repo
+Hello sir, my name is Nakul and this is my Week 11 fullstack blog project.
 
-## Short Explanation To Speak
+In this project, I connected the React frontend with the backend API so that blog posts can be created, loaded, refreshed, and deleted from the user interface.
 
-This Week 11 project connects the frontend UI with a backend API. The user can create posts, load posts, and delete posts from the interface. I also added loading states, error handling, and a cleaner demo flow for submission.
+This is the home screen of the project. On the left side there is a form to create a post, and on the right side there is a list of saved posts.
+
+Now I am creating a new blog post by filling the title, author name, and content fields.
+
+After clicking the Create Post button, the new post is added to the list.
+
+Now I am refreshing the page to show that the frontend is loading the saved data again from the backend.
+
+The same post is still visible after refresh.
+
+Now I am deleting the post from the UI.
+
+The post is removed successfully, which shows that the create, fetch, refresh, and delete flow is working correctly.
+
+I also added loading states, validation, and error handling in the frontend.
+
+These are my GitHub repositories and this is the deployed project link.
+
+Thank you.

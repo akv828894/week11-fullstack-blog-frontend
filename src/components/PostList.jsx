@@ -8,21 +8,21 @@ export default function PostList({
   onDelete,
 }) {
   if (isLoading) {
-    return <p className="empty-state">Loading posts from the backend...</p>;
+    return <p className="empty-state">Loading posts...</p>;
   }
 
   if (posts.length === 0) {
     return (
       <div className="empty-state">
-        <p>No posts yet.</p>
-        <p>Create the first post from the form and it will appear here.</p>
+        <p>No posts found.</p>
+        <p>Create a post using the form.</p>
       </div>
     );
   }
 
   return (
     <div className="post-list-wrap">
-      {isRefreshing ? <p className="refresh-indicator">Refreshing posts from the server...</p> : null}
+      {isRefreshing ? <p className="refresh-indicator">Refreshing posts...</p> : null}
 
       <div className="post-list">
       {posts.map((post) => (

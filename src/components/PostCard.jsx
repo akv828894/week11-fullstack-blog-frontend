@@ -34,7 +34,6 @@ export default function PostCard({ post, isDeleting, onDelete }) {
 
       <div className="post-footer">
         <span>Created: {formatDate(post.createdAt)}</span>
-        <span>{post.authorDetails?.email || 'No email linked'}</span>
       </div>
     </article>
   );
