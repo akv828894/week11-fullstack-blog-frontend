@@ -22,7 +22,8 @@ copy .env.example .env
 npm run dev
 ```
 
-The app expects the backend API at `VITE_API_URL`, which defaults to `http://localhost:5000`.
+The app reads the backend API from `VITE_API_URL`.
+Development uses `http://localhost:5000` and production uses the live Week 11 API URL.
 
 ## Deployment Notes
 
@@ -34,9 +35,14 @@ Deploy this project on Vercel.
 - Build command: `npm run build`
 - Output directory: `dist`
 
-### Required Environment Variable
+### API Configuration
 
-Set this in Vercel before production deploy:
+This repo already includes:
+
+- `.env.development` for local work
+- `.env.production` for the live Week 11 API
+
+If your API URL changes later, you can still override it in Vercel:
 
 ```env
 VITE_API_URL=https://your-week11-api-url.onrender.com

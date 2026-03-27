@@ -1,11 +1,23 @@
-const fallbackUrl = 'http://localhost:5000';
-const baseUrl = (import.meta.env.VITE_API_URL || fallbackUrl).replace(/\/$/, '');
+const localApiUrl = 'http://localhost:5000';
+const liveApiUrl = 'https://week11-fullstack-blog-backend.vercel.app';
+
+function resolveFallbackUrl() {
+  if (typeof window === 'undefined') {
+    return localApiUrl;
+  }
+
+  return ['localhost', '127.0.0.1'].includes(window.location.hostname)
+    ? localApiUrl
+    : liveApiUrl;
+}
+
+export const apiBaseUrl = (import.meta.env.VITE_API_URL || resolveFallbackUrl()).replace(/\/$/, '');
 
 async function apiRequest(path, options = {}) {
   let response;
 
   try {
-    response = await fetch(`${baseUrl}${path}`, {
+    response = await fetch(`${apiBaseUrl}${path}`, {
       headers: {
         'Content-Type': 'application/json',
         ...(options.headers || {}),

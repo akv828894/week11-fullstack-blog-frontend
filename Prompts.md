@@ -40,3 +40,25 @@ Prepare the Week 11 frontend for GitHub submission, deployment, and demo recordi
 1. Push the Week 11 frontend to GitHub
 2. Deploy the frontend on Vercel
 3. Verify the deployed URL with the live API
+
+## 27 March 2026
+
+### Goal
+
+Lock the Week 11 frontend for final video recording and submission.
+
+### Work Completed
+
+- Added separate development and production API configs
+- Updated the frontend to show the active backend URL from the shared API config
+- Verified the production build points to the live Week 11 backend
+- Updated submission docs to match the final deployment setup
+
+### Final Demo Flow
+
+1. Open the live Week 11 frontend
+2. Create a new post
+3. Refresh the page
+4. Show the post still visible
+5. Delete the post
+6. Show the GitHub repo and deployed links

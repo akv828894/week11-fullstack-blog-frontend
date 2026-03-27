@@ -2,7 +2,7 @@ import { startTransition, useEffect, useState } from 'react';
 import PostForm from './components/PostForm';
 import PostList from './components/PostList';
 import StatusBanner from './components/StatusBanner';
-import { createPost, deletePostById, getPosts } from './services/api';
+import { apiBaseUrl, createPost, deletePostById, getPosts } from './services/api';
 
 const initialForm = {
   title: '',
@@ -198,7 +198,7 @@ export default function App() {
           </p>
           <div className="hero-meta">
             <span>Frontend: React + Vite</span>
-            <span>Backend: {import.meta.env.VITE_API_URL || 'http://localhost:5000'}</span>
+            <span>Backend: {apiBaseUrl}</span>
           </div>
         </section>
 
